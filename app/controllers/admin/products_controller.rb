@@ -38,9 +38,9 @@ class Admin::ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
-    @product.destroy.product
+    @product.destroy
     flash[:warning] = "成功将 #{@product.title} 从后台删除！"
-    redirect_to :back
+    redirect_to admin_products_path
   end
 
   private
