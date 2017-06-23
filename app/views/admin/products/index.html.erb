@@ -12,7 +12,7 @@
   <thead>
     <tr>
       <th>#</th>
-      <th width="220">Product Pic</th>
+      <th width="180">Product Pic</th>
       <th>Name</th>
       <th>Price</th>
       <th width="100"> Options</th>
@@ -43,6 +43,8 @@
         </td>
         <td>
           <%= link_to("Edit", edit_admin_product_path(product)) %>
+          |
+          <%= link_to("Delete", admin_product_path(product)) %>
         </td>
       </tr>
     <% end %>
